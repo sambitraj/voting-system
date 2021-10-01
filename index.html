@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ONLINE VOTING SYSTEM</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <style>
+            #body_section{
+                height: 350px;
+                width: 250px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 100px auto 0px auto;
+                background-color: #eaeaea;
+                -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+                -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+                box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+            }
+        </style>
+        <center>
+            <div id="header_section">
+                <h1>ONLINE VOTING SYSTEM</h1>          
+            </div>
+            <hr>
+    
+           <div id="body_section">
+                <form action="api/login.php" method="POST">
+                    <h2>LOGIN</h2>
+                    <input type="number" name="mobile" placeholder="Enter mobile"><br><br>
+                    <input type="password" name="password" placeholder="Enter password"><br><br>
+                    <select name="role" id="dropbox">
+                        <option value="1">voter</option>
+                        <option value="2">group</option>
+                    </select><br><br>
+                    <button id="loginbtn">LOGIN</button><br><br>
+                    New user?  <a href="routes/register.html">Register here</a>
+                </form>
+           </div>
+        </center>
+    </body>
+</html>

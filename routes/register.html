@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ONLINE VOTING SYSTEM</title>
+       <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <style>
+            #address{
+                width:365px;
+            }
+            #image_part{
+                border: 2px solid black;
+                border-radius: 5px;
+                width:380px;
+                padding: 10px;
+            }
+            #role{
+                border: 2px solid black;
+                border-radius: 5px;
+                width:380px;
+                padding: 10px;
+            }
+            #role select{
+                border-radius: 5px;
+                padding: 10px;
+            }
+            #registerbtn{
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #2f3542;
+                color: white;
+                border-radius: 5px;
+            }
+            #body_section{
+                height: 510px;
+                width: 430px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 100px auto 0px auto;
+                background-color: #eaeaea;
+                -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+                -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+                box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+            }
+        </style>
+        <center>
+            <div id="header_section">
+                <h1>ONLINE VOTING SYSTEM</h1>          
+            </div>
+            <hr>
+            <div id="body_section">
+                <form action="../api/register.php" method="POST" enctype="multipart/form-data" >
+                    <h2>Registeration</h2>
+                    <input type="text" name="name" placeholder="Enter name">
+                    <input type="number" name="mobile" placeholder="Enter mobile"><br><br>
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+                    <input  id="address" type="text" name="address" placeholder="Enter Address"><br><br>
+        
+                    <center>
+        
+                        <div id="image_part">
+                            <p>Upload image:<input type="file" name="photo" ></p> 
+                        </div><br>
+                         
+                        <div id="role">
+                            Select role:<select name="role">
+                                <option value="1">Voter</option>
+                                <option value="2">Group</option>
+                            </select><br>
+                        </div><br>
+                        
+                    </center> 
+                    
+                    <button id="registerbtn">Register</button><br><br>
+                    Already user ? <a href="../index.html">Login here</a>
+                </form>
+            </div>
+        </center>
+        
+    </body>
+</html>
